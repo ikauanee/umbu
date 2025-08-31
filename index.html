@@ -104,7 +104,7 @@
             box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
         }
         
-        #qrcode {
+        #qrcode, #qrcodeCaixa {
             margin: 20px auto;
             padding: 20px;
             background: white;
@@ -307,7 +307,7 @@
                                     <div class="mb-3">
                                         <label for="codigoNFe" class="form-label">Chave da NFe</label>
                                         <input type="text" class="form-control" id="codigoNFe" placeholder="Digite a chave de acesso (44 dígitos) da NFe" required>
-                                        <div class="form-text">Use as chaves de exemplo ou uma chave real de 44 dígitos.</div>
+                                        <div class="form-text">Use as chaves de exemplo ou uma chave de 44 dígitos.</div>
                                     </div>
                                     <button type="submit" class="btn btn-primary" id="btnCadastrar">
                                         <span class="btn-text">Cadastrar NFe</span>
@@ -337,7 +337,7 @@
                                 </div>
                                 <div id="noNfeInfo" class="text-center p-4">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-receipt" viewBox="0 0 16 16" style="color: #ccc;">
-                                        <path d="M1.92.506a.5.5 0 0 1 .434.14L3 1.293l.646-.647a.5.5 0 0 1 .708 0L5 1.293l.646-.647a.5.5 0 0 1 .708 0L7 1.293l.646-.647a.5.5 0 0 1 .708 0L9 1.293l.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .801.13l.5 1A.5.5 0 0 1 15 2v12a.5.5 0 0 1-.053.224l-.5 1a.5.5 0 0 1-.8.13L13 14.707l-.646.647a.5.5 0 0 1-.708 0L11 14.707l-.646.647a.5.5 0 0 1-.708 0L9 14.707l-.646.647a.5.5 0 0 1-.708 0L7 14.707l-.646.647a.5.5 0 0 1-.708 0L5 14.707l-.646.647a.5.5 0 0 1-.708 0L3 14.707l-.646.647a.5.5 0 0 1-.801-.13l-.5-1A.5.5 0 0 1 1 14V2a.5.5 0 0 1 .053-.224l.5-1a.5.5 0 0 1 .367-.27zm.902 13.65a.5.5 0 0 0 .684-.12L3 13.793l.646.647a.5.5 0 0 0 .708 0L5 13.793l.646.647a.5.5 0 0 0 .708 0L7 13.793l.646.647a.5.5 0 0 0 .708 0L9 13.793l.646.647a.5.5 0 0 0 .708 0l.646-.647.646.647a.5.5 0 0 0 .801-.13l.5-1a.5.5 0 0 0-.053-.224L14 2.207l-.646.647a.5.5 0 0 1-.708 0L12 2.207l-.646.647a.5.5 0 0 1-.708 0L10 2.207l-.646.647a.5.5 0 0 1-.708 0L8 2.207l-.646.647a.5.5 0 0 1-.708 0L6 2.207l-.646.647a.5.5 0 0 1-.708 0L4 2.207l-.646.647a.5.5 0 0 1-.708 0L2 2.207l-.646.647a.5.5 0 0 0-.12.684l.5 1a.5.5 0 0 0 .13.801l.5-.5.5.5a.5.5 0 0 0 .8-.13l.5-1a.5.5 0 0 0-.053-.224l.5-.5.5.5a.5.5 0 0 0 .8-.13l.5-1a.5.5 0 0 0-.053-.224l.5-.5.5.5a.5.5 0 0 0 .8-.13l.5-1a.5.5 0 0 0-.053-.224l.5-.5.5.5a.5.5 0 0 0 .8-.13l.5-1z"/>
+                                        <path d="M1.92.506a.5.5 0 0 1 .434.14L3 1.293l.646-.647a.5.5 0 0 1 .708 0L5 1.293l.646-.647a.5.5 0 0 1 .708 0L7 1.293l.646-.647a.5.5 0 0 1 .708 0L9 1.293l.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .801.13l.5 1A.5.5 0 0 1 15 2v12a.5.5 0 0 1-.053.224l-.5 1a.5.5 0 0 1-.8.13L13 14.707l-.646.647a.5.5 0 0 1-.708 0L11 14.707l-.646.647a.5.5 0 0 1-.708 0L9 14.707l-.646.647a.5.5 0 0 1-.708 0L7 14.707l-.646.647a.5.5 0 0 1-.708 0L5 14.707l-.646.647a.5.5 0 0 1-.801-.13l-.5-1A.5.5 0 0 1 1 14V2a.5.5 0 0 1 .053-.224l.5-1a.5.5 0 0 1 .367-.27zm.902 13.65a.5.5 0 0 0 .684-.12L3 13.793l.646.647a.5.5 0 0 0 .708 0L5 13.793l.646.647a.5.5 0 0 0 .708 0L7 13.793l.646.647a.5.5 0 0 0 .708 0L9 13.793l.646.647a.5.5 0 0 0 .708 0l.646-.647.646.647a.5.5 0 0 0 .801-.13l.5-1a.5.5 0 0 0-.053-.224L14 2.207l-.646.647a.5.5 0 0 1-.708 0L12 2.207l-.646.647a.5.5 0 0 1-.708 0L10 2.207l-.646.647a.5.5 0 0 1-.708 0L8 2.207l-.646.647a.5.5 0 0 1-.708 0L6 2.207l-.646.647a.5.5 0 0 1-.708 0L4 2.207l-.646.647a.5.5 0 0 1-.708 0L2 2.207l-.646.647a.5.5 0 0 0-.12.684l.5 1a.5.5 0 0 0 .13.801l.5-.5.5.5a.5.5 0 0 0 .8-.13l.5-1a.5.5 0 0 0-.053-.224l.5-.5.5.5a.5.5 0 0 0 .8-.13l.5-1a.5.5 0 0 0-.053-.224l.5-.5.5.5a.5.5 0 0 0 .8-.13l.5-1a.5.5 0 0 0-.053-.224l.5-.5.5.5a.5.5 0 0 0 .8-.13l.5-1z"/>
                                     </svg>
                                     <p class="mt-3 text-muted">Nenhuma informação de NFe disponível. Cadastre uma NFe para visualizar os dados.</p>
                                 </div>
@@ -437,12 +437,65 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+        // Dados fictícios para demonstração
+        const nfeDataExamples = {
+            "35240801234567000123550010000000011000000016": {
+                id: 1,
+                numero: "202400001",
+                dataEmissao: "2024-08-15",
+                cnpjEmitente: "12.345.678/0001-90",
+                nomeEmitente: "Empresa Comercial LTDA",
+                cnpjDestinatario: "98.765.432/0001-10",
+                nomeDestinatario: "Cliente Teste ME",
+                produtos: [
+                    { codigo: "P001", descricao: "Notebook Gamer", quantidade: 1, valorUnitario: 3500.00 },
+                    { codigo: "P002", descricao: "Mouse Sem Fio", quantidade: 2, valorUnitario: 85.90 }
+                ],
+                valorTotal: 3671.80,
+                chaveAcesso: "35240801234567000123550010000000011000000016"
+            },
+            "35240801234567000123550010000000021000000017": {
+                id: 2,
+                numero: "202400002",
+                dataEmissao: "2024-09-20",
+                cnpjEmitente: "11.222.333/0001-44",
+                nomeEmitente: "Comércio de Eletrônicos SA",
+                cnpjDestinatario: "55.666.777/0001-88",
+                nomeDestinatario: "Loja de Informática Ltda",
+                produtos: [
+                    { codigo: "P004", descricao: "Monitor 24''", quantidade: 4, valorUnitario: 899.00 },
+                    { codigo: "P005", descricao: "Impressora Laser", quantidade: 2, valorUnitario: 1299.00 },
+                    { codigo: "P006", descricao: "Webcam HD", quantidade: 10, valorUnitario: 199.90 }
+                ],
+                valorTotal: 8557.00,
+                chaveAcesso: "35240801234567000123550010000000021000000017"
+            },
+            "35240801234567000123550010000000031000000018": {
+                id: 3,
+                numero: "202400003",
+                dataEmissao: "2024-10-10",
+                cnpjEmitente: "99.888.777/0001-66",
+                nomeEmitente: "Distribuidora Central Ltda",
+                cnpjDestinatario: "44.333.222/0001-55",
+                nomeDestinatario: "Supermercado Modelo",
+                produtos: [
+                    { codigo: "P007", descricao: "Arroz 5kg", quantidade: 50, valorUnitario: 22.90 },
+                    { codigo: "P008", descricao: "Feijão 1kg", quantidade: 40, valorUnitario: 8.50 },
+                    { codigo: "P009", descricao: "Óleo de Soja 900ml", quantidade: 30, valorUnitario: 7.99 },
+                    { codigo: "P010", descricao: "Açúcar 5kg", quantidade: 25, valorUnitario: 18.75 }
+                ],
+                valorTotal: 2086.20,
+                chaveAcesso: "35240801234567000123550010000000031000000018"
+            }
+        };
+
         // Armazenamento de notas fiscais
         let nfeRecords = JSON.parse(localStorage.getItem('nfeRecords')) || [];
         let nextId = nfeRecords.length > 0 ? Math.max(...nfeRecords.map(nfe => nfe.id)) + 1 : 4;
 
         // Mostrar notificação
         function showNotification(message, isSuccess = true) {
+            console.log(`Notificação: ${message}, Sucesso: ${isSuccess}`);
             const notification = document.getElementById('notification');
             notification.textContent = message;
             notification.style.backgroundColor = isSuccess ? '#27ae60' : '#e74c3c';
@@ -462,6 +515,7 @@
             const loading = btnCadastrar.querySelector('.loading');
             
             if (!codigo) {
+                console.error('Erro: Código da NFe não fornecido');
                 showNotification('Por favor, insira uma chave válida.', false);
                 return;
             }
@@ -471,47 +525,79 @@
             loading.style.display = 'inline-block';
             btnCadastrar.disabled = true;
             
-            // Consultar API ou usar dados fictícios
-            fetch('/api/cadastrar', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ codigo: codigo })
-            })
-            .then(res => {
-                if (!res.ok) {
-                    throw new Error(`Erro HTTP: ${res.status} ${res.statusText}`);
+            try {
+                // Extrair chave de 44 dígitos se for uma URL
+                let chave = codigo;
+                if (codigo.includes('chave=')) {
+                    const match = codigo.match(/chave=(\d{44})/);
+                    if (match) {
+                        chave = match[1];
+                        console.log(`Chave extraída da URL: ${chave}`);
+                    } else {
+                        console.error('Erro: Chave inválida na URL');
+                        showNotification('Chave de acesso inválida (deve ter 44 dígitos)', false);
+                        return;
+                    }
                 }
-                return res.json();
-            })
-            .then(data => {
-                if (data.error) {
-                    showNotification(data.error, false);
+                
+                // Validar chave
+                if (!/^\d{44}$/.test(chave)) {
+                    console.error(`Erro: Chave inválida: ${chave}`);
+                    showNotification('Chave de acesso deve conter exatamente 44 dígitos numéricos', false);
                     return;
                 }
                 
-                // Verificar se já existe
-                if (nfeRecords.some(record => record.chaveAcesso === data.chaveAcesso)) {
+                console.log(`Processando cadastro para chave: ${chave}`);
+                
+                // Verificar se a chave já está cadastrada
+                if (nfeRecords.some(record => record.chaveAcesso === chave)) {
+                    console.warn(`NFe já cadastrada: ${chave}`);
                     showNotification('Esta NFe já está cadastrada no sistema.', false);
                     return;
                 }
                 
-                // Adicionar ID único
-                const nfeComId = {...data, id: nextId++};
-                nfeRecords.push(nfeComId);
+                // Simular consulta aos dados fictícios
+                let nfeData;
+                if (chave in nfeDataExamples) {
+                    nfeData = { ...nfeDataExamples[chave], id: nextId++ };
+                    console.log(`Usando dados fictícios para chave: ${chave}`);
+                } else {
+                    // Simular uma NFe genérica para chaves não conhecidas
+                    nfeData = {
+                        id: nextId++,
+                        numero: `NF${chave.slice(-8)}`,
+                        dataEmissao: new Date().toISOString().split('T')[0],
+                        cnpjEmitente: "00.000.000/0001-00",
+                        nomeEmitente: "Empresa Genérica LTDA",
+                        cnpjDestinatario: "11.111.111/0001-11",
+                        nomeDestinatario: "Cliente Genérico",
+                        produtos: [
+                            { codigo: "P999", descricao: "Produto Genérico", quantidade: 1, valorUnitario: 100.00 }
+                        ],
+                        valorTotal: 100.00,
+                        chaveAcesso: chave
+                    };
+                    console.log(`Gerando NFe genérica para chave: ${chave}`);
+                }
+                
+                // Adicionar ao registro
+                nfeRecords.push(nfeData);
                 localStorage.setItem('nfeRecords', JSON.stringify(nfeRecords));
                 
+                console.log(`NFe cadastrada: ${JSON.stringify(nfeData)}`);
+                
                 // Exibir informações
-                document.getElementById('infoNumero').textContent = nfeComId.numero;
-                document.getElementById('infoData').textContent = new Date(nfeComId.dataEmissao).toLocaleDateString('pt-BR');
-                document.getElementById('infoEmitente').textContent = nfeComId.nomeEmitente;
-                document.getElementById('infoCnpjEmitente').textContent = nfeComId.cnpjEmitente;
-                document.getElementById('infoDestinatario').textContent = nfeComId.nomeDestinatario;
-                document.getElementById('infoCnpjDestinatario').textContent = nfeComId.cnpjDestinatario;
-                document.getElementById('infoValor').textContent = nfeComId.valorTotal.toFixed(2);
-                document.getElementById('infoChave').textContent = nfeComId.chaveAcesso;
+                document.getElementById('infoNumero').textContent = nfeData.numero || 'N/A';
+                document.getElementById('infoData').textContent = nfeData.dataEmissao ? new Date(nfeData.dataEmissao).toLocaleDateString('pt-BR') : 'N/A';
+                document.getElementById('infoEmitente').textContent = nfeData.nomeEmitente || 'N/A';
+                document.getElementById('infoCnpjEmitente').textContent = nfeData.cnpjEmitente || 'N/A';
+                document.getElementById('infoDestinatario').textContent = nfeData.nomeDestinatario || 'N/A';
+                document.getElementById('infoCnpjDestinatario').textContent = nfeData.cnpjDestinatario || 'N/A';
+                document.getElementById('infoValor').textContent = nfeData.valorTotal ? nfeData.valorTotal.toFixed(2) : '0.00';
+                document.getElementById('infoChave').textContent = nfeData.chaveAcesso || 'N/A';
                 
                 // Exibir produtos
-                const produtosHtml = nfeComId.produtos.length > 0 ? `
+                const produtosHtml = nfeData.produtos && nfeData.produtos.length > 0 ? `
                     <table class="table table-striped">
                         <thead>
                             <tr>
@@ -523,13 +609,13 @@
                             </tr>
                         </thead>
                         <tbody>
-                            ${nfeComId.produtos.map(produto => `
+                            ${nfeData.produtos.map(produto => `
                                 <tr>
                                     <td>${produto.codigo || 'N/A'}</td>
-                                    <td>${produto.descricao || produto.nome || 'N/A'}</td>
+                                    <td>${produto.descricao || 'N/A'}</td>
                                     <td>${produto.quantidade || 'N/A'}</td>
-                                    <td>R$ ${(produto.valorUnitario || produto.valor_unitario || 0).toFixed(2)}</td>
-                                    <td>R$ ${((produto.quantidade || 0) * (produto.valorUnitario || produto.valor_unitario || 0)).toFixed(2)}</td>
+                                    <td>R$ ${(produto.valorUnitario || 0).toFixed(2)}</td>
+                                    <td>R$ ${((produto.quantidade || 0) * (produto.valorUnitario || 0)).toFixed(2)}</td>
                                 </tr>
                             `).join('')}
                         </tbody>
@@ -546,15 +632,14 @@
                 atualizarListaNFe();
                 atualizarSelectNFe();
                 atualizarCaixaNFeList();
-            })
-            .catch(err => {
+            } catch (err) {
+                console.error(`Erro ao cadastrar: ${err.message}`);
                 showNotification(`Erro ao cadastrar: ${err.message}`, false);
-            })
-            .finally(() => {
+            } finally {
                 btnText.style.display = 'inline-block';
                 loading.style.display = 'none';
                 btnCadastrar.disabled = false;
-            });
+            }
         });
 
         // Atualizar lista de NFe
@@ -570,11 +655,11 @@
             nfeRecords.forEach(nfe => {
                 const tr = document.createElement('tr');
                 tr.innerHTML = `
-                    <td>${nfe.numero}</td>
-                    <td>${nfe.nomeEmitente}</td>
-                    <td>${new Date(nfe.dataEmissao).toLocaleDateString('pt-BR')}</td>
-                    <td>R$ ${nfe.valorTotal.toFixed(2)}</td>
-                    <td>${nfe.chaveAcesso}</td>
+                    <td>${nfe.numero || 'N/A'}</td>
+                    <td>${nfe.nomeEmitente || 'N/A'}</td>
+                    <td>${nfe.dataEmissao ? new Date(nfe.dataEmissao).toLocaleDateString('pt-BR') : 'N/A'}</td>
+                    <td>R$ ${nfe.valorTotal ? nfe.valorTotal.toFixed(2) : '0.00'}</td>
+                    <td>${nfe.chaveAcesso || 'N/A'}</td>
                     <td>
                         <button class="btn btn-sm btn-info btn-visualizar" data-id="${nfe.id}">Visualizar</button>
                         <button class="btn btn-sm btn-danger btn-remover" data-id="${nfe.id}">Remover</button>
@@ -583,7 +668,6 @@
                 nfeList.appendChild(tr);
             });
             
-            // Adicionar event listeners
             document.querySelectorAll('.btn-visualizar').forEach(btn => {
                 btn.addEventListener('click', () => {
                     const id = parseInt(btn.getAttribute('data-id'));
@@ -602,7 +686,7 @@
 
         // Exibir detalhes da NFe
         function exibirDetalhesNFe(nfe) {
-            const produtosHtml = nfe.produtos.length > 0 ? `
+            const produtosHtml = nfe.produtos && nfe.produtos.length > 0 ? `
                 <table class="table table-striped">
                     <thead>
                         <tr>
@@ -617,10 +701,10 @@
                         ${nfe.produtos.map(produto => `
                             <tr>
                                 <td>${produto.codigo || 'N/A'}</td>
-                                <td>${produto.descricao || produto.nome || 'N/A'}</td>
+                                <td>${produto.descricao || 'N/A'}</td>
                                 <td>${produto.quantidade || 'N/A'}</td>
-                                <td>R$ ${(produto.valorUnitario || produto.valor_unitario || 0).toFixed(2)}</td>
-                                <td>R$ ${((produto.quantidade || 0) * (produto.valorUnitario || produto.valor_unitario || 0)).toFixed(2)}</td>
+                                <td>R$ ${(produto.valorUnitario || 0).toFixed(2)}</td>
+                                <td>R$ ${((produto.quantidade || 0) * (produto.valorUnitario || 0)).toFixed(2)}</td>
                             </tr>
                         `).join('')}
                     </tbody>
@@ -632,22 +716,22 @@
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title">Detalhes da NFe ${nfe.numero}</h5>
+                                <h5 class="modal-title">Detalhes da NFe ${nfe.numero || 'N/A'}</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                             </div>
                             <div class="modal-body">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <p><strong>Número:</strong> ${nfe.numero}</p>
-                                        <p><strong>Data de Emissão:</strong> ${new Date(nfe.dataEmissao).toLocaleDateString('pt-BR')}</p>
-                                        <p><strong>Emitente:</strong> ${nfe.nomeEmitente}</p>
-                                        <p><strong>CNPJ Emitente:</strong> ${nfe.cnpjEmitente}</p>
+                                        <p><strong>Número:</strong> ${nfe.numero || 'N/A'}</p>
+                                        <p><strong>Data de Emissão:</strong> ${nfe.dataEmissao ? new Date(nfe.dataEmissao).toLocaleDateString('pt-BR') : 'N/A'}</p>
+                                        <p><strong>Emitente:</strong> ${nfe.nomeEmitente || 'N/A'}</p>
+                                        <p><strong>CNPJ Emitente:</strong> ${nfe.cnpjEmitente || 'N/A'}</p>
                                     </div>
                                     <div class="col-md-6">
-                                        <p><strong>Destinatário:</strong> ${nfe.nomeDestinatario}</p>
-                                        <p><strong>CNPJ/CPF Destinatário:</strong> ${nfe.cnpjDestinatario}</p>
-                                        <p><strong>Valor Total:</strong> R$ ${nfe.valorTotal.toFixed(2)}</p>
-                                        <p><strong>Chave de Acesso:</strong> ${nfe.chaveAcesso}</p>
+                                        <p><strong>Destinatário:</strong> ${nfe.nomeDestinatario || 'N/A'}</p>
+                                        <p><strong>CNPJ/CPF Destinatário:</strong> ${nfe.cnpjDestinatario || 'N/A'}</p>
+                                        <p><strong>Valor Total:</strong> R$ ${nfe.valorTotal ? nfe.valorTotal.toFixed(2) : '0.00'}</p>
+                                        <p><strong>Chave de Acesso:</strong> ${nfe.chaveAcesso || 'N/A'}</p>
                                     </div>
                                 </div>
                                 <h5 class="mt-4">Produtos</h5>
@@ -689,7 +773,7 @@
             nfeRecords.forEach((nfe) => {
                 const option = document.createElement('option');
                 option.value = nfe.id;
-                option.textContent = `NFe ${nfe.numero} - ${nfe.nomeEmitente}`;
+                option.textContent = `NFe ${nfe.numero || 'N/A'} - ${nfe.nomeEmitente || 'N/A'}`;
                 select.appendChild(option);
             });
         }
@@ -711,8 +795,8 @@
                     <div class="form-check mb-3">
                         <input class="form-check-input" type="checkbox" value="${nfe.id}" id="caixaNFe${i}" checked>
                         <label class="form-check-label" for="caixaNFe${i}">
-                            <strong>NFe ${nfe.numero}</strong> - ${nfe.nomeEmitente}<br>
-                            <small>Valor: R$ ${nfe.valorTotal.toFixed(2)} | Data: ${new Date(nfe.dataEmissao).toLocaleDateString('pt-BR')}</small>
+                            <strong>NFe ${nfe.numero || 'N/A'}</strong> - ${nfe.nomeEmitente || 'N/A'}<br>
+                            <small>Valor: R$ ${nfe.valorTotal ? nfe.valorTotal.toFixed(2) : '0.00'} | Data: ${nfe.dataEmissao ? new Date(nfe.dataEmissao).toLocaleDateString('pt-BR') : 'N/A'}</small>
                         </label>
                     </div>
                 `;
@@ -730,15 +814,16 @@
                 const nfe = nfeRecords.find(record => record.id === id);
                 
                 if (nfe) {
-                    nfe.produtos.forEach((produto, i) => {
+                    console.log(`NFe selecionada para QR Code: ${nfe.numero}`);
+                    nfe.produtos && nfe.produtos.forEach((produto, i) => {
                         const col = document.createElement('div');
                         col.className = 'col-md-6';
                         col.innerHTML = `
                             <div class="form-check mb-3">
                                 <input class="form-check-input" type="checkbox" value="${i}" id="produto${i}" checked>
                                 <label class="form-check-label" for="produto${i}">
-                                    <strong>${produto.codigo || 'N/A'}</strong> - ${produto.descricao || produto.nome || 'N/A'}<br>
-                                    <small>Quantidade: ${produto.quantidade || 'N/A'} | Valor: R$ ${(produto.valorUnitario || produto.valor_unitario || 0).toFixed(2)}</small>
+                                    <strong>${produto.codigo || 'N/A'}</strong> - ${produto.descricao || 'N/A'}<br>
+                                    <small>Quantidade: ${produto.quantidade || 'N/A'} | Valor: R$ ${(produto.valorUnitario || 0).toFixed(2)}</small>
                                 </label>
                             </div>
                         `;
@@ -767,31 +852,29 @@
                 return;
             }
             
-            // Coletar produtos selecionados
             const produtosSelecionados = [];
             checkboxes.forEach(checkbox => {
                 const produtoIndex = parseInt(checkbox.value);
                 produtosSelecionados.push(nfe.produtos[produtoIndex]);
             });
             
-            // Criar dados para o QR Code (mais completos)
             const qrData = {
-                nfe: nfe.numero,
-                chaveAcesso: nfe.chaveAcesso,
-                dataEmissao: nfe.dataEmissao,
-                nomeEmitente: nfe.nomeEmitente,
-                valorTotal: nfe.valorTotal,
+                nfe: nfe.numero || 'N/A',
+                chaveAcesso: nfe.chaveAcesso || 'N/A',
+                dataEmissao: nfe.dataEmissao || 'N/A',
+                nomeEmitente: nfe.nomeEmitente || 'N/A',
+                valorTotal: nfe.valorTotal || 0,
                 produtos: produtosSelecionados.map(prod => ({
                     codigo: prod.codigo || 'N/A',
-                    descricao: prod.descricao || prod.nome || 'N/A',
+                    descricao: prod.descricao || 'N/A',
                     quantidade: prod.quantidade || 0,
-                    valorUnitario: prod.valorUnitario || prod.valor_unitario || 0
+                    valorUnitario: prod.valorUnitario || 0
                 }))
             };
             
             const qrDataString = JSON.stringify(qrData);
+            console.log(`Dados do QR Code: ${qrDataString}`);
             
-            // Gerar QR Code
             const qrContainer = document.getElementById('qrcode');
             qrContainer.innerHTML = '';
             new QRCode(qrContainer, {
@@ -800,15 +883,14 @@
                 height: 200
             });
             
-            document.getElementById('qrInfo').textContent = `QR Code gerado para ${produtosSelecionados.length} produtos da NFe ${nfe.numero} - ${nfe.nomeEmitente} (R$ ${nfe.valorTotal.toFixed(2)})`;
+            document.getElementById('qrInfo').textContent = `QR Code gerado para ${produtosSelecionados.length} produtos da NFe ${nfe.numero || 'N/A'} - ${nfe.nomeEmitente || 'N/A'} (R$ ${nfe.valorTotal ? nfe.valorTotal.toFixed(2) : '0.00'})`;
             document.getElementById('downloadQr').style.display = 'inline-block';
             
-            // Configurar download do QR Code
             document.getElementById('downloadQr').onclick = function() {
                 const canvas = qrContainer.querySelector('canvas');
                 const url = canvas.toDataURL('image/png');
                 const link = document.createElement('a');
-                link.download = `qrcode-nfe-${nfe.numero}.png`;
+                link.download = `qrcode-nfe-${nfe.numero || 'N/A'}.png`;
                 link.href = url;
                 link.click();
             };
@@ -825,28 +907,26 @@
                 return;
             }
             
-            // Coletar NFes selecionadas
             const nfeSelecionadas = [];
             let valorTotalCaixa = 0;
             checkboxes.forEach(checkbox => {
                 const nfeId = parseInt(checkbox.value);
                 const nfe = nfeRecords.find(record => record.id === nfeId);
                 nfeSelecionadas.push({
-                    numero: nfe.numero,
-                    chaveAcesso: nfe.chaveAcesso,
-                    nomeEmitente: nfe.nomeEmitente,
-                    valorTotal: nfe.valorTotal,
-                    produtos: nfe.produtos.map(prod => ({
+                    numero: nfe.numero || 'N/A',
+                    chaveAcesso: nfe.chaveAcesso || 'N/A',
+                    nomeEmitente: nfe.nomeEmitente || 'N/A',
+                    valorTotal: nfe.valorTotal || 0,
+                    produtos: (nfe.produtos || []).map(prod => ({
                         codigo: prod.codigo || 'N/A',
-                        descricao: prod.descricao || prod.nome || 'N/A',
+                        descricao: prod.descricao || 'N/A',
                         quantidade: prod.quantidade || 0,
-                        valorUnitario: prod.valorUnitario || prod.valor_unitario || 0
+                        valorUnitario: prod.valorUnitario || 0
                     }))
                 });
-                valorTotalCaixa += nfe.valorTotal;
+                valorTotalCaixa += nfe.valorTotal || 0;
             });
             
-            // Criar dados para o QR Code da Caixa
             const qrData = {
                 caixaId: `CAIXA${Date.now()}`,
                 nfeSelecionadas: nfeSelecionadas,
@@ -855,8 +935,8 @@
             };
             
             const qrDataString = JSON.stringify(qrData);
+            console.log(`Dados do QR Code da Caixa: ${qrDataString}`);
             
-            // Gerar QR Code
             const qrContainer = document.getElementById('qrcodeCaixa');
             qrContainer.innerHTML = '';
             new QRCode(qrContainer, {
@@ -868,7 +948,6 @@
             document.getElementById('qrCaixaInfo').textContent = `QR Code gerado para ${nfeSelecionadas.length} NFes - Valor Total: R$ ${valorTotalCaixa.toFixed(2)}`;
             document.getElementById('downloadQrCaixa').style.display = 'inline-block';
             
-            // Configurar download do QR Code
             document.getElementById('downloadQrCaixa').onclick = function() {
                 const canvas = qrContainer.querySelector('canvas');
                 const url = canvas.toDataURL('image/png');
@@ -883,6 +962,7 @@
 
         // Inicializar a página
         document.addEventListener('DOMContentLoaded', function() {
+            console.log('Página inicializada, atualizando listas...');
             atualizarListaNFe();
             atualizarSelectNFe();
             atualizarCaixaNFeList();
